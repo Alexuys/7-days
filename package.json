@@ -1,0 +1,32 @@
+{
+  "name": "7-days",
+  "version": "1.0.0",
+  "description": "js vue",
+  "main": "./src/server/backend.js",
+  "scripts": {
+    "start": "node backend.js",
+    "dev": "nodemon backend.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexuys/7-days.git"
+  },
+  "keywords": [
+    "js",
+    "vue",
+    "express"
+  ],
+  "author": "Alexandr <alexysten@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "bugs": {
+    "url": "https://github.com/Alexuys/7-days/issues"
+  },
+  "homepage": "https://github.com/Alexuys/7-days#readme"
+}

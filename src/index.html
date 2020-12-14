@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>7 days</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class = 'container'>
+        <div class = 'item row align-items-start'>
+        <div class='col'>
+            <p class = 'days'>1 days</p>
+            <form class='d-flex' @submit.prevent='createDay_1'>
+                <input class = 'form-control' v-model='form.value_1' />
+                <button class = 'btn btn-dark' type = 'submit' id = 'but'>Add</button>
+            </form>    
+            <ul class = 'list-group list-group-flush' v-for='task_1 in tasks_1'>
+              <li class = 'list-group-item  list'>{{task_1.value_1}}<button class = 'btn btn-danger btn-sm' @click='removeDay_1(task_1.id)'>X</button></li>
+            </ul>
+        </div>
+        <div class='col'>
+          <p class = 'days'>3 days</p>
+          <form class='d-flex' @submit.prevent='createDay_3'>
+              <input class = 'form-control' v-model='form.value_3' />
+              <button class = 'btn btn-dark' type = 'submit' id = 'but'>Add</button>
+          </form>    
+          <ul class = 'list-group list-group-flush' v-for='task_3 in tasks_3'>
+            <li class = 'list-group-item  list'>{{task_3.value_3}}</li>
+          </ul>
+      </div>
+      <div class='col'>
+        <p class = 'days'>7 days</p>
+        <form class='d-flex' @submit.prevent='createDay_7'>
+            <input class = 'form-control' v-model='form.value_7' />
+            <button class = 'btn btn-dark' type = 'submit' id = 'but'>Add</button>
+        </form>    
+        <ul class = 'list-group list-group-flush' v-for='task_7 in tasks_7'>
+          <li class = 'list-group-item  list'>{{task_7.value_7}}</li>
+        </ul>
+    </div>
+        </div>
+    </div>
+    </div>
+    <!-- <script src="./server/backend.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+    <!-- <script src=""></script> -->
+  </body>
+</html>
